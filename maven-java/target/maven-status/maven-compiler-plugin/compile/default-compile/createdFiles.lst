@@ -1,0 +1,4 @@
+org/nlopt4j/optimizer/NLoptResult.class
+org/nlopt4j/optimizer/NLopt.class
+org/nlopt4j/optimizer/NLopt$NLopt_func.class
+org/nlopt4j/optimizer/NLopt$Param.class
