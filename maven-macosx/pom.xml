@@ -30,6 +30,7 @@
         <artifactId>native-maven-plugin</artifactId>
         <extensions>true</extensions>
         <configuration>
+          <javahPath>/usr/bin/javah</javahPath>
           <workingDirectory>${project.build.directory}</workingDirectory>
           <!--  trigger javah -->
           <javahOS>darwin</javahOS>
