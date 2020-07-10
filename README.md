@@ -1,6 +1,10 @@
 In order to run the test in command line in macOS, use the following:
 
-./mvnw clean test -Dhome.path=$HOME
+./mvnw clean test -Dhome.path=$HOME -Dalgoproject.path=<algo-project-path>
+
+e.g.
+
+./mvnw clean test -Dhome.path=$HOME -Dalgoproject.path=/Users/n/Dev/git/Algo-Project
 
 
 nlopt4j - NLopt for Java
