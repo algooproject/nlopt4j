@@ -296,4 +296,8 @@ gradle-app.setting
 ### Gradle Patch ###
 **/build/
 
+maven-win32/target/
+maven-java/target/
+maven-macosx/target/
+
 # End of https://www.toptal.com/developers/gitignore/api/eclipse,intellij,java,maven,gradle,groovy,macos,windows
