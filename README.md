@@ -1,3 +1,8 @@
+In order to run the test in command line in macOS, use the following:
+
+./mvnw clean test -Dhome.path=$HOME
+
+
 nlopt4j - NLopt for Java
 ========================
 

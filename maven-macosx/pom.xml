@@ -23,7 +23,7 @@
     </dependency>
   </dependencies>
   <build>
-    <testSourceDirectory>/Users/patrickli/git/nlopt4j/src/test/java</testSourceDirectory>
+    <testSourceDirectory>${project.basedir}/../src/test/java</testSourceDirectory>
     <plugins>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>

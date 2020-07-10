@@ -102,8 +102,8 @@
         </os>
       </activation>
 	  <properties>
-        <nlopt.include>/Users/patrickli/nlopt/include</nlopt.include>
-        <nlopt.library>/Users/patrickli/nlopt/lib/libnlopt.dylib</nlopt.library>
+        <nlopt.include>${home.path}/nlopt/include</nlopt.include>
+        <nlopt.library>${home.path}/nlopt/lib/libnlopt.dylib</nlopt.library>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
       </properties>

@@ -14,7 +14,7 @@
   <packaging>jar</packaging>
 
   <build>
-	<sourceDirectory>/Users/patrickli/git/nlopt4j/src/main/java</sourceDirectory>
+	<sourceDirectory>${project.basedir}/../src/main/java</sourceDirectory>
     <defaultGoal>package</defaultGoal>
     <plugins>
       <plugin>
