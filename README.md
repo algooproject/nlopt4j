@@ -18,6 +18,11 @@ How to put algo-project.jar to maven, see algo project repo -> README.md
 
 Why need `-Dalgoproject.path`? Because Stock-analysis.jar need to read the stock history file when doint optimization, and currently need to refer to the Algo Project repo to read the file. You can see `algoproject.path` in Algo Project -> Constants.java for how to get algoproject.path
 
+> What it is the optimizer doing?
+
+* MainForNLOPT.class return 0 - profit
+* In nlopt, it set the minObjective, meaning trying to optmize to find the input values to get the lowerest (0-profit) output value
+  * It means to trying to get the input values results in maximum profit
 
 ---
 
