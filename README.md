@@ -1,3 +1,5 @@
+## How to run?
+
 In order to run the test in command line in macOS, use the following:
 
 ./mvnw clean test -Dhome.path=$HOME -Dalgoproject.path=<algo-project-path>
@@ -6,6 +8,18 @@ e.g.
 
 ./mvnw clean test -Dhome.path=$HOME -Dalgoproject.path=/Users/n/Dev/git/Algo-Project
 
+Basically, the nlopt needs to do optimization by calling Stock-analysis.jar to run, and it is referenced as maven depedency (ref nlopt4j -> pom.xml)
+
+## How to update Stock-analysis.jar?
+
+How to put algo-project.jar to maven, see algo project repo -> README.md
+
+## What is algoproject.path (as system variable)?
+
+Why need `-Dalgoproject.path`? Because Stock-analysis.jar need to read the stock history file when doint optimization, and currently need to refer to the Algo Project repo to read the file. You can see `algoproject.path` in Algo Project -> Constants.java for how to get algoproject.path
+
+
+---
 
 nlopt4j - NLopt for Java
 ========================
