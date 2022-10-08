@@ -24,6 +24,21 @@ Why need `-Dalgoproject.path`? Because Stock-analysis.jar need to read the stock
 * In nlopt, it set the minObjective, meaning trying to optmize to find the input values to get the lowerest (0-profit) output value
   * It means to trying to get the input values results in maximum profit
 
+## In case `ld: framework not found JavaVM` occurs:
+
+- It is related to macOS and XCode and jvm stuff
+- Reference: https://stackoverflow.com/a/67313468
+- You can safely replace `-framework JavaVM` with `-framework JavaNativeFoundation`. It worked for me.
+  in maven-macosx/pom.xml
+
+```
+<linkerStartOptions>  
+  <linkerStartOption>${linker.debug.options}</linkerStartOption>  
+  <!--<linkerStartOption>-dynamiclib -framework JavaVM ${nlopt.library}</linkerStartOption>-->  
+  <linkerStartOption>-dynamiclib -framework JavaNativeFoundation ${nlopt.library}</linkerStartOption>  
+</linkerStartOptions>
+```
+
 ---
 
 nlopt4j - NLopt for Java

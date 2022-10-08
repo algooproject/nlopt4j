@@ -59,6 +59,7 @@
           <linkerStartOptions>
             <linkerStartOption>${linker.debug.options}</linkerStartOption>
             <linkerStartOption>-dynamiclib -framework JavaVM ${nlopt.library}</linkerStartOption>
+            <!--<linkerStartOption>-dynamiclib -framework JavaNativeFoundation ${nlopt.library}</linkerStartOption>-->
           </linkerStartOptions>
         </configuration>
       </plugin>
