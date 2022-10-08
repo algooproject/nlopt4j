@@ -1,3 +1,21 @@
+
+## > Installation step
+
+* Step 1. Download the tar from https://nlopt.readthedocs.io/en/latest/#download-and-installation
+* Step 2. unzip to `~nlopt` as [nlopt4j](https://github.com/dibyendumajumdar/nlopt4j) mentioned
+  * `mv nlopt-2.6.2.zip ~`
+  * `cd ~`
+  * `unzip nlopt-2.6.2.zip`
+  * `mv nlopt-2.6.2 nlopt`
+  * `cd nlopt`
+* Step 3. cmake
+  *  `cmake . && make && sudo make install` inside ~/nlopt
+* Step 4. Create include and lib then put related file inside it (path defined by [nlopt4j](https://github.com/dibyendumajumdar/nlopt4j)]])
+  * `mkdir include`
+  * `mkdir lib`
+  * `cp *.in include`
+  * `cp *.dylib lib`
+
 ## How to run?
 
 In order to run the test in command line in macOS, use the following:
@@ -24,7 +42,21 @@ Why need `-Dalgoproject.path`? Because Stock-analysis.jar need to read the stock
 * In nlopt, it set the minObjective, meaning trying to optmize to find the input values to get the lowerest (0-profit) output value
   * It means to trying to get the input values results in maximum profit
 
-## In case `ld: framework not found JavaVM` occurs:
+## Troubleshooting: Could not initialize class org.nlopt4j.optimizer.NLopt
+
+* Need to use oracle jdk, not adoptopenjdk
+* Bug ticket for this: Reference: https://github.com/AdoptOpenJDK/openjdk-build/issues/489
+* Error if using adoptopenjdk:
+
+```
+[INFO] Running org.nlopt4j.optimizer.TestNLopt
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.002 s <<< FAILURE! - in org.nlopt4j.optimizer.TestNLopt
+[ERROR] org.nlopt4j.optimizer.TestNLopt.testTutorialSample  Time elapsed: 0 s  <<< ERROR!
+java.lang.NoClassDefFoundError: Could not initialize class org.nlopt4j.optimizer.NLopt
+        at org.nlopt4j.optimizer.TestNLopt.testTutorialSample(TestNLopt.java:53)
+```
+
+## ## Troubleshooting: `ld: framework not found JavaVM` occurs
 
 - It is related to macOS and XCode and jvm stuff
 - Reference: https://stackoverflow.com/a/67313468
