@@ -56,7 +56,7 @@ java.lang.NoClassDefFoundError: Could not initialize class org.nlopt4j.optimizer
         at org.nlopt4j.optimizer.TestNLopt.testTutorialSample(TestNLopt.java:53)
 ```
 
-## ## Troubleshooting: `ld: framework not found JavaVM` occurs
+## Troubleshooting: `ld: framework not found JavaVM` occurs
 
 - It is related to macOS and XCode and jvm stuff
 - Reference: https://stackoverflow.com/a/67313468
@@ -72,6 +72,8 @@ java.lang.NoClassDefFoundError: Could not initialize class org.nlopt4j.optimizer
 ```
 
 ---
+
+Below is standup introduction for nlopt4j:
 
 nlopt4j - NLopt for Java
 ========================
